@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'আমার নোটপ্যাড',
           style: TextStyle(fontSize: 22, fontFamily: "banglaFont"),
         ),
@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
         leading: Container(),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(15),
+        padding: const EdgeInsets.all(14),
         child: Column(
           children: [
             TextField(
@@ -46,9 +46,9 @@ class _HomePageState extends State<HomePage> {
                       borderSide: const BorderSide(color: Colors.black),
                       borderRadius: BorderRadius.circular(10))),
             ),
-            const SizedBox(height: 15),
+            const SizedBox(height: 14),
             SizedBox(
-              height: 50,
+              height: 48,
               width: double.infinity,
               child: ElevatedButton(
                   onPressed: () async {
@@ -81,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                                               builder: (_) {
                                                 return Dialog(
                                                   child: Container(
-                                                    padding: EdgeInsets.all(15),
+                                                    padding: const EdgeInsets.all(15),
                                                     height: 150,
                                                     child: Column(
                                                       children: [
@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                                                                   borderRadius:
                                                                   BorderRadius
                                                                       .circular(
-                                                                      10),
+                                                                      9),
                                                                   borderSide:
                                                                   const BorderSide(
                                                                       color:
@@ -106,21 +106,21 @@ class _HomePageState extends State<HomePage> {
                                                           notepad!.putAt(index, updatedata).toString();
                                                           _updatecontroller.clear();
                                                           Navigator.pop(context);
-                                                        }, child: Text('জমা করুন'))
+                                                        }, child: const Text('জমা করুন'))
                                                       ],
                                                     ),
                                                   ),
                                                 );
                                               });
                                         },
-                                        icon: Icon(Icons.edit),
+                                        icon: const Icon(Icons.edit),
                                         color: Colors.green,
                                       ),
                                       IconButton(
                                         onPressed: () async {
                                           await notepad!.deleteAt(index);
                                         },
-                                        icon: Icon(Icons.delete),
+                                        icon: const Icon(Icons.delete),
                                         color: Colors.red,
                                       ),
                                     ],
